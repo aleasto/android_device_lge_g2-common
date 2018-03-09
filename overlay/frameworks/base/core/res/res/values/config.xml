@@ -330,4 +330,11 @@
         <item>XTRA_SERVER_2=http://xtrapath2.izatcloud.net/xtra2.bin</item>
         <item>XTRA_SERVER_3=http://xtrapath3.izatcloud.net/xtra2.bin</item>
     </string-array>
+
+    <!-- Doze mode -->
+    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+    <integer name="config_screenBrightnessDoze">10</integer>
+    <bool name="config_dozeAfterScreenOff">true</bool>
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+
 </resources>
