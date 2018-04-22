@@ -1,15 +1,8 @@
 #misc
 refs/changes/27/208627/1
-refs/changes/77/211377/4
 refs/changes/46/205546/6
-refs/changes/44/205544/5
 #audio
 refs/changes/88/201888/10
-refs/changes/91/201891/10
-refs/changes/34/202034/8
-refs/changes/48/202148/8
-refs/changes/82/205382/5
-refs/changes/78/211378/4
 #ril
 refs/changes/55/210955/4
 refs/changes/57/210957/3
@@ -18,9 +11,6 @@ refs/changes/56/210956/4
 refs/changes/28/208628/5
 refs/changes/73/211373/2
 refs/changes/60/204260/6
-#charger
-refs/changes/78/205378/6
-refs/changes/79/205379/6
 #lights
 refs/changes/22/211422/4
 #camera
