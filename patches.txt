@@ -1,7 +1,5 @@
 #vendor
-refs/changes/10/213410/12
-refs/changes/61/214161/4
-refs/changes/75/211375/7
+refs/changes/75/211375/8
 #audio
 refs/changes/88/201888/10
 #ril
@@ -12,16 +10,11 @@ refs/changes/56/210956/4
 refs/changes/28/208628/6
 refs/changes/73/211373/2
 refs/changes/60/204260/6
-#lights
-refs/changes/22/211422/15
 #camera
 refs/changes/74/211374/5
 refs/changes/19/213119/5
 refs/changes/48/214848/3
 #display
 refs/changes/50/209050/1
-#perf
-refs/changes/73/214873/1
 #selinux
 refs/changes/06/202806/18
-
