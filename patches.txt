@@ -3,14 +3,12 @@ refs/changes/88/201888/10
 #ril
 refs/changes/55/210955/4
 refs/changes/57/210957/3
-refs/changes/54/210954/4
+refs/changes/54/210954/5
 refs/changes/56/210956/4
 refs/changes/28/208628/8
 refs/changes/73/211373/2
 refs/changes/60/204260/6
 #camera, not all roms have this by default yet
 refs/changes/74/211374/5
-#ambient display
-refs/changes/50/209050/1
 #selinux
 refs/changes/06/202806/18
