@@ -10,5 +10,7 @@ refs/changes/73/211373/2
 refs/changes/60/204260/6
 #camera, not all roms have this by default yet
 refs/changes/74/211374/5
+#nfc
+refs/changes/88/218488/1 
 #selinux
 refs/changes/06/202806/18
