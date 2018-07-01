@@ -1,5 +1,3 @@
-#audio
-refs/changes/88/201888/10
 #ril
 refs/changes/55/210955/4
 refs/changes/57/210957/3
@@ -10,7 +8,17 @@ refs/changes/73/211373/2
 refs/changes/60/204260/6
 #camera, not all roms have this by default yet
 refs/changes/74/211374/5
-#nfc
-refs/changes/88/218488/1 
-#selinux
+#selinux fixes
+refs/changes/36/218336/2
+refs/changes/20/218420/5
+refs/changes/21/218421/5
+refs/changes/19/218419/4
+refs/changes/43/218443/3
+refs/changes/42/218442/3
+refs/changes/22/218422/5
+refs/changes/67/218567/3
+refs/changes/64/218764/4
+refs/changes/27/218827/2
+refs/changes/88/218888/3
+#permissive selinux:
 refs/changes/06/202806/18
