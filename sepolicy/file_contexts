@@ -3,6 +3,7 @@
 
 # Bluetooth
 /dev/rfkill                                         u:object_r:rfkill_device:s0
+/sys/devices/platform/bluetooth_rfkill/rfkill/rfkill0/state u:object_r:sysfs_bluetooth_writable:s0
 /dev/btlock                                         u:object_r:btlock_file:s0
 
 # Diag
@@ -24,6 +25,9 @@
 
 # Lights
 /system/vendor/bin/hw/android\.hardware\.light@2\.0-service\.g2    u:object_r:hal_light_default_exec:s0
+/sys/devices/mdp(.*)/qcom,mdss_fb_primary(.*)/leds(/.*)?           u:object_r:sysfs_leds:s0
+/sys/devices/mdp(.*)/qcom,mdss_fb_primary(.*)/leds/lcd-backlight/max_brightness      u:object_r:sysfs_leds:s0
+/sys/devices/virtual/lg_rgb_led/use_patterns/blink_patterns        u:object_r:sysfs_leds:s0
 
 # MPdecision
 /data/system/default_values                         u:object_r:mpctl_data_file:s0
@@ -53,3 +57,6 @@
 # Vibrator
 /sys/devices/virtual/input/lge_touch(/.*)?          u:object_r:sysfs_touchpanel:s0
 /sys/devices/platform/tspdrv/nforce_timed           u:object_r:sysfs_vibeamp:s0
+
+# Wifi
+/sys/module/bcmdhd/parameters/firmware_path u:object_r:sysfs_wlan_fwpath:s0
