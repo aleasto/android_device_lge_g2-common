@@ -27,6 +27,14 @@ def IncrementalOTA_Assertions(info):
   AddTrustZoneAssertion(info, info.target_zip)
   return
 
+def FullOTA_InstallBegin(info):
+  CreateVendorPartition(info)
+  return
+
+def IncrementalOTA_InstallBegin(info):
+  CreateVendorPartition(info)
+  return
+
 def AddBootloaderAssertion(info):
   info.script.AppendExtra('assert(run_program("/sbin/sh", "-c", "aboot=`strings /dev/block/platform/msm_sdcc.1/by-name/aboot | grep mdss_mdp.panel=`; if [ -z \\"$aboot\\" ]; then exit 1; fi") == 0 || abort("Wrong Aboot version, please update!"););')
   return
@@ -40,3 +48,21 @@ def AddTrustZoneAssertion(info, input_zip):
       cmd = 'assert(g2.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1");'
       info.script.AppendExtra(cmd)
   return
+
+def CreateVendorPartition(info):
+  info.script.AppendExtra('package_extract_file("install/bin/sgdisk_ota", "/tmp/sgdisk");');
+  info.script.AppendExtra('package_extract_file("install/bin/toybox_ota", "/tmp/toybox");');
+  info.script.AppendExtra('package_extract_file("install/bin/e2fsck_ota", "/tmp/e2fsck");');
+  info.script.AppendExtra('package_extract_file("install/bin/mke2fs_ota", "/tmp/mke2fs");');
+  info.script.AppendExtra('package_extract_file("install/bin/resize2fs_static", "/tmp/resize2fs");');
+  info.script.AppendExtra('package_extract_file("install/bin/vendor.sh", "/tmp/vendor.sh");');
+  info.script.AppendExtra('set_metadata("/tmp/sgdisk", "uid", 0, "gid", 0, "mode", 0755);');
+  info.script.AppendExtra('set_metadata("/tmp/toybox", "uid", 0, "gid", 0, "mode", 0755);');
+  info.script.AppendExtra('set_metadata("/tmp/e2fsck", "uid", 0, "gid", 0, "mode", 0755);');
+  info.script.AppendExtra('set_metadata("/tmp/mke2fs", "uid", 0, "gid", 0, "mode", 0755);');
+  info.script.AppendExtra('set_metadata("/tmp/resize2fs", "uid", 0, "gid", 0, "mode", 0755);');
+  info.script.AppendExtra('set_metadata("/tmp/vendor.sh", "uid", 0, "gid", 0, "mode", 0755);');
+  info.script.AppendExtra('ui_print("Checking for vendor partition...");');
+  info.script.AppendExtra('if run_program("/tmp/vendor.sh") != 0 then');
+  info.script.AppendExtra('abort("Create /vendor partition failed.");');
+  info.script.AppendExtra('endif;');

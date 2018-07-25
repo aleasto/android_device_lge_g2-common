@@ -264,6 +264,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/touch_dev.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/touch_dev.idc
 
+# Vendor partition
+PRODUCT_PACKAGES += \
+   resize2fs_static \
+   toybox_ota \
+   mke2fs_ota \
+   e2fsck_ota \
+   sgdisk_ota
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/scripts/vendor.sh:install/bin/vendor.sh
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
