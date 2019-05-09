@@ -331,4 +331,7 @@
         <item>XTRA_SERVER_2=http://xtrapath2.izatcloud.net/xtra2.bin</item>
         <item>XTRA_SERVER_3=http://xtrapath3.izatcloud.net/xtra2.bin</item>
     </string-array>
+
+    <bool name="config_multiColorNotificationLed">true</bool>
+
 </resources>
