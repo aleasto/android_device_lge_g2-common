@@ -155,6 +155,12 @@ TARGET_LD_SHIM_LIBS := /vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
 # Shipping API level (for CTS backward compatibility)
 PRODUCT_SHIPPING_API_LEVEL := 17
 
+# Treble
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+PRODUCT_TREBLE_LINKER_NAMESPACES_OVERRIDE := false
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED  := true
+TARGET_COPY_OUT_VENDOR := vendor
+
 # Wi-Fi
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
