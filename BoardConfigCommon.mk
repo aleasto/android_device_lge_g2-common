@@ -72,7 +72,7 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/bin/mediaserver=21 \
-    /system/vendor/bin/mm-qcamera-daemon=21
+    /vendor/bin/mm-qcamera-daemon=21
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -142,11 +142,11 @@ BOARD_SEPOLICY_DIRS += \
     device/lge/g2-common/sepolicy
 
 # Shims
-TARGET_LD_SHIM_LIBS := /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
-    /system/vendor/lib/libmmcamera2_stats_algorithm.so|libshim_atomic.so \
-    /system/vendor/lib/hw/camera.vendor.msm8974.so|libshim_atomic.so \
-    /system/vendor/lib/hw/camera.vendor.msm8974.so|libshim_camera_parameters.so \
-    /system/vendor/bin/mpdecision|libshim_atomic.so
+TARGET_LD_SHIM_LIBS := /vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
+    /vendor/lib/libmmcamera2_stats_algorithm.so|libshim_atomic.so \
+    /vendor/lib/hw/camera.vendor.msm8974.so|libshim_atomic.so \
+    /vendor/lib/hw/camera.vendor.msm8974.so|libshim_camera_parameters.so \
+    /vendor/bin/mpdecision|libshim_atomic.so
 
 # Shipping API level (for CTS backward compatibility)
 PRODUCT_SHIPPING_API_LEVEL := 17
@@ -159,5 +159,5 @@ BOARD_HOSTAPD_DRIVER        := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_bcmdhd
 BOARD_WLAN_DEVICE           := bcmdhd
 WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_FW_PATH_STA     := "/system/vendor/firmware/fw_bcmdhd.bin"
-WIFI_DRIVER_FW_PATH_AP      := "/system/vendor/firmware/fw_bcmdhd_apsta.bin"
+WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/fw_bcmdhd.bin"
+WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
