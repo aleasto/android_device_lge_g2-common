@@ -132,9 +132,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/lge/g2-common/releasetools
 # RIL
 TARGET_RIL_VARIANT := caf
 
-# SDClang
-TARGET_USE_SDCLANG := true
-
 # SELinux policies
 include device/qcom/sepolicy-legacy/sepolicy.mk
 
